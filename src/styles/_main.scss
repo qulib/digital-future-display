@@ -1,0 +1,18 @@
+#main {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem;
+}
+
+// flex fallback for Microsoft browser
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// for real browsers
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
