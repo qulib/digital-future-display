@@ -10,7 +10,7 @@ module.exports = {
         name: "Digital Future Display",
         short_name: "Digital Future Display",
         start_url: "/",
-        background_color: "#406486",
+        background_color: "#ffffff",
         theme_color: "#00305e",
         display: "minimal-ui",
         icon: "src/images/qul-squares.png", 
@@ -22,13 +22,11 @@ module.exports = {
         baseUrl: "digital-future.queensu.ca",
         protocol: "https",
         hostingWPCOM: false,
-        useACF: true,
+        useACF: false,
         verboseOutput: false,
         excludedRoutes: [
-          "/akismet/**",
-          "/jetpack/**",
-          "/wp/v2/jp_pay_order/**",
-          "/wp/v2/users/**"
+          "/wp/v2/users/*",
+          "/wp/v2/comments/*"
         ]
       }
     },
