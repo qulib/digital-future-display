@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/slideshow`,
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
