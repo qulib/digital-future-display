@@ -1,28 +1,55 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
+import Slide from "../components/slide"
+import "../styles/style.scss"
 
-import Layout from "../components/layout"
-import Card from "../components/card"
+class Slider extends Component {
+  constructor(props) {
+    super(props)
 
-class Home extends Component {
+    this.state = {
+      currentIndex: 0
+    }
+  }
+
+  goToPrevSlide = () => {
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex - 1
+    }));
+    console.log(this.state.currentIndex)
+  }
+
+  goToNextSlide = () => {
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex + 1
+    }));
+    console.log(this.state.currentIndex)
+  }
+
   render() {
     const data = this.props.data;
 
     return (
-      <Layout>
-        <div className="cards">
-          {data.allWordpressPost.edges.map(({ node }) => (
-            <div key={node.slug}>
-              <Card node={node} />
-            </div>
-          ))}
-        </div>
-      </Layout>
+      <div className="slider">
+        <Helmet htmlAttributes={{ lang: "en" }}>
+          <meta charSet="utf-8" />
+          <title>Digital Futures</title>
+        </Helmet> 
+
+        {data.allWordpressPost.edges.map(({ node }) => (
+          <Slide key={node.slug} node={node} />
+        ))}
+
+        <button onClick={this.goToPrevSlide}>Prev</button>
+        <button onClick={this.goToNextSlide}>Next</button>
+
+      </div>
     )
   }
 }
 
-export default Home
+export default Slider
 
 export const pageQuery = graphql`
 {
@@ -36,7 +63,7 @@ export const pageQuery = graphql`
           alt_text
           localFile {
             childImageSharp {
-              resize(width: 400) {
+              resize(width: 800) {
                 src
               }
             }

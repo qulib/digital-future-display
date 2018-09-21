@@ -2,14 +2,4 @@
 @import "~normalize-css/normalize.css";
 @import "variables";
 @import "main";
-@import "card";
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-a {
-  color: $colour-text-link;
-}
+@import "slide";
