@@ -1,3 +1,19 @@
 .slide {
-  
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 12vh;
+  border: 1px solid $colour-primary-blue;
+
+  main {
+    color: $colour-primary-blue;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 3rem;
+
+    h3 {
+      font-weight: 300;
+      font-size: 40px;
+    }
+  }
 }
