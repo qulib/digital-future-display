@@ -1,7 +1,7 @@
 {
-  "name": "qul-gatsby-wordpress",
-  "repository": "https://github.com/qulib/qul-gatsby-wordpress.git",
-  "description": "QUL example site using the Wordpress source plugin",
+  "name": "digital-future-display",
+  "repository": "https://github.com/qulib/digital-future-display",
+  "description": "Digital display for Digital Futures",
   "version": "1.0.0",
   "author": "Paul Clifford",
   "dependencies": {
@@ -30,7 +30,7 @@
     "develop": "npm run clean && gatsby develop",
     "build": "npm run clean && gatsby build",
     "start": "gatsby serve",
-    "predeploy": "gatsby build --prefix-paths", 
+    "predeploy": "npm run clean && gatsby build --prefix-paths", 
     "clean": "rimraf .cache public",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
