@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Slider from "react-slick"
+import 'typeface-open-sans'
 
 import Slide from "../components/slide"
 import "../styles/style.scss"
@@ -12,13 +13,12 @@ class Home extends Component {
     const data = this.props.data;
 
     const settings = {
-      centerMode: true,
-      centerPadding: '0px',
       fade: true,
       slidesToShow: 1,
       autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 10000,
+      infinite: true,
+      speed: 3000,
+      autoplaySpeed: 8000,
       cssEase: "linear"
     };
 
@@ -26,7 +26,7 @@ class Home extends Component {
       <div className="slider">
         <Helmet htmlAttributes={{ lang: "en" }}>
           <meta charSet="utf-8" />
-          <title>Digital Futures</title>
+          <title>Digital Future</title>
         </Helmet>
         <Slider {...settings}>
           {data.allWordpressPost.edges.map(({ node }) => (
