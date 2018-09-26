@@ -16,9 +16,10 @@ class Home extends Component {
       lazyLoad: true,
       slidesToShow: 1,
       autoplay: true,
+      pauseOnHover: false,
       infinite: true,
       speed: 3000,
-      autoplaySpeed: 8000,
+      autoplaySpeed: 7000,
     }
 
     return (
