@@ -13,12 +13,12 @@ class Home extends Component {
 
     const settings = {
       fade: true,
+      lazyLoad: true,
       slidesToShow: 1,
       autoplay: true,
       infinite: true,
       speed: 3000,
       autoplaySpeed: 8000,
-      cssEase: 'linear',
     }
 
     return (
@@ -41,7 +41,7 @@ export default Home
 
 export const pageQuery = graphql`
   {
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost {
       edges {
         node {
           title
