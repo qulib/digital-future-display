@@ -52,7 +52,7 @@ export const pageQuery = graphql`
             alt_text
             localFile {
               childImageSharp {
-                resize(width: 600, height: 600) {
+                resize(width: 850, height: 850) {
                   src
                 }
               }

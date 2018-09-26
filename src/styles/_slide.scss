@@ -1,19 +1,20 @@
 .slide {
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 850px 1fr;
   width: 90%;
   margin: 0 auto;
-  margin-top: 12vh;
+  margin-top: 10.5vh;
   border: 1px solid $colour-primary-blue;
 
   main {
     color: $colour-primary-blue;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 3rem;
+    font-size: 30px;
 
     h3 {
       font-weight: 300;
-      font-size: 40px;
+      font-size: 60px;
     }
   }
 }
