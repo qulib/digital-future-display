@@ -18,8 +18,8 @@ class Home extends Component {
       autoplay: true,
       pauseOnHover: false,
       infinite: true,
-      speed: 3000,
-      autoplaySpeed: 7000,
+      speed: 4000,
+      autoplaySpeed: 10000,
     }
 
     return (
