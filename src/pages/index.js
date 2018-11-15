@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Slider from 'react-slick'
 import 'typeface-open-sans'
 
-import Slide from '../components/slide'
+import Slide from '../components/Slide.jsx'
 import '../styles/style.scss'
 
 class Home extends Component {
@@ -45,6 +45,7 @@ export const pageQuery = graphql`
     allWordpressPost {
       edges {
         node {
+          status
           title
           slug
           excerpt
