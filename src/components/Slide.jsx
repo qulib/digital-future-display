@@ -2,11 +2,7 @@ import React from 'react'
 
 const Slide = ({ node }) => (
   <>
-    {node.status === 'publish' ? (
-      null
-      ) : (
-      console.log('not published') 
-    )}
+    {node.status === 'publish' ? null : console.log('not published')}
     <div className="slide">
       <figure className="slide-image">
         <img
@@ -16,7 +12,11 @@ const Slide = ({ node }) => (
       </figure>
 
       <main>
-        <h3 className="slide-title">{node.title}</h3>
+        <h3
+          className="slide-title"
+          dangerouslySetInnerHTML={{ __html: node.title }}
+        />
+
         <div
           className="slide-excerpt"
           dangerouslySetInnerHTML={{ __html: node.excerpt }}
